@@ -1,0 +1,175 @@
+@charset "UTF-8";
+*{margin: 0px; box-sizing: border-box;}
+html,body{height: 100%;}
+html{scroll-behavior: smooth;} 
+body{font-family: "verdana", sans-serif;
+	background-color: #fff;z-index: -1;
+	overflow-x: hidden;
+}
+.bg {
+	background-image: url('../img/bcity.jpg');
+	background-position: center; 
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	padding: 20px;
+	z-index: 1;
+	color: #555;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: auto;
+ }
+ .content{
+ 	border:2px solid #fff;
+ 	overflow: hidden;
+ 	max-width: 1200px;
+ 	margin: 30px auto;
+ 	float: left;
+ 	margin-left: 200px;
+ 	padding: 20px;
+ 	border-radius: 10px;
+ 	position: relative;
+ 	background-color: rgba(255,255,255,0.3);
+ }
+ #nav{
+ 	width: 200px;
+ 	float: left;
+ 	height: 100%;
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	overflow: auto;
+ 	transition: 0.3s;
+ 	text-align: center;
+ 	overflow-x: hidden;
+ 	background-color: #fff;
+ 	animation: 0.5s fromLeft;
+ }
+ #nav a{
+ 	display: block;
+ 	padding: 10px 20px;
+ 	border:1px solid #fff;
+ 	border-bottom: none;
+ 	width: 100%;
+ 	transition: 0.3s;
+ 	color: #fff;
+ 	background-color: #999;
+ }
+ #nav a:hover:not(#nav > div a){
+ 	background-color: #fff;
+ 	color: #999;
+ }
+ #nav img{display: block;}
+ #nav a.res{border-bottom: 1px solid #999;}
+ #menu{
+ 	z-index: 2;
+ 	font-size: 25px;
+ 	cursor: pointer;
+ 	padding: 10px 20px;
+ 	background-color: #fff;
+ 	display: none;
+ 	box-shadow: 0px 3px 3px 3px #999;
+ }
+ #overlay{display: none;}
+ img{width: 100%;}
+ hr{
+ 	width: 100px;
+ 	border:1px solid #fff;
+ }
+ a{
+ 	text-decoration: none;
+ 	color: inherit;
+ }
+ .hom{width: 100%;}
+.hom h1{
+	display: inline-block;
+	margin: 0px auto;
+	font-size: 4vw;
+	text-align: center;
+	padding: 20px;
+	background-color: #fff;
+}
+.hom > div{
+	margin-top: 10vh;
+	padding: 20px;
+	background-color: #fff;
+	width: 100%;
+}
+#nav > div{
+	margin-top: 5vh;
+	width: 100%;
+	text-align: center;
+	background-color: #fff;
+	font-size: 5.5vh;
+}
+p{
+	margin: 20px 0px;
+	line-height: 1.5em;
+}
+ul{list-style-type: square;overflow: hidden;}
+li{width: 50%;float: left;margin: 20px 0px;}
+.work{
+	width: 100%;
+}
+.work a:hover{text-decoration: underline;}
+.work img{
+	width: 150px;
+	border-radius: 20px;
+	position: absolute;
+	top: 10px;right: 10px;
+}
+.table{width: 100%;display: block;}
+.table span{display: none;}
+table,td,th{border:1px dashed #999;}
+table{margin: 30px 0px;width: 100%;}
+th{padding: 10px;}
+td{padding: 20px 0px;text-align: center;}
+.hom > div{overflow: hidden;}
+.pictures{padding: 30px 0px;}
+.pictures > div{
+	width: 32%;
+	float: left;
+	overflow: hidden;
+	border:2px solid #fff;
+}
+.pictures img{display: block;}
+@keyframes fromLeft{
+	from{left: -900px;}
+	to{left: 0px;}
+}
+@media screen and (min-width: 1500px){
+	.table span{display: inline;}
+}
+@media screen and (max-width: 850px){
+	.hom{width: 100%;}
+}
+@media screen and (max-width: 750px){
+	#nav{display: none;z-index: 3;}
+	#overlay{
+	position: fixed;
+	top: 0px;
+	background-color: rgba(0,0,0,0.4);
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	display: none;}
+	table{border-collapse: collapse;}
+	 #home{margin-top: 100px;}
+	 .hom > div{margin-top: 5vh;}
+	 body{font-size: 13px;}
+	.bg,.content{padding: 10px;}
+	.hom h1{font-size: 6vw;}
+	li{font-size: 12px;}
+	#menu{display: inline-block;}
+	.content{margin-left: 0px;}
+}
+@media screen and (max-height: 900px){
+	#nav > div{position: absolute;bottom: 0;}
+}
+@media screen and (max-height: 550px){
+	#nav > div{position: static;}
+}
